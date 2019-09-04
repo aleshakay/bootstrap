@@ -63,4 +63,59 @@ const pies = [
       printToDom('pie-zone', domString)
   }
 
-  cardBuilder(pies)
+ // cardBuilder(pies)
+
+  document.getElementById('michael').addEventListener('click', (e) =>{
+    //figure out who the instructor is for the button we click
+    
+    const instructor = e.target.id
+    //only get zoees's pies for the list of all the pies
+    const selectedPies = []
+    
+    for (i = 0; i < pies.length; i++){
+        const pie = pies[i]
+        if (pie.instructor === instructor){
+            selectedPies.push(pie)
+        }
+
+    }
+    //pass small list of pies back into the pie builder
+    cardBuilder(selectedPies)
+})
+
+ // pieBuilder(pies)
+ document.getElementById('zoe').addEventListener('click', (e) =>{
+    //figure out who the instructor is for the button we click
+    
+    const instructor = e.target.id
+    //only get zoees's pies for the list of all the pies
+    const selectedPies = []
+    
+    for (i = 0; i < pies.length; i++){
+        const pie = pies[i]
+        if (pie.instructor === instructor){
+            selectedPies.push(pie)
+        }
+
+    }
+    //pass small list of pies back into the pie builder
+    cardBuilder(selectedPies)
+})
+
+document.getElementById('callan').addEventListener('click', (e) =>{
+    //figure out who the instructor is for the button we click
+    
+    const instructor = e.target.id
+    //only get zoees's pies for the list of all the pies
+    const selectedPies = []
+    
+    for (i = 0; i < pies.length; i++){
+        const pie = pies[i]
+        if (pie.instructor === instructor){
+            selectedPies.push(pie)
+        }
+
+    }
+    //pass small list of pies back into the pie builder
+    cardBuilder(selectedPies)
+})
